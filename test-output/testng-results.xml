@@ -2,16 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="22963" started-at="2020-08-11T19:28:29Z" finished-at="2020-08-11T19:28:52Z">
+  <suite name="Default suite" duration-ms="70932" started-at="2020-08-12T14:13:40Z" finished-at="2020-08-12T14:14:51Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="22963" started-at="2020-08-11T19:28:29Z" finished-at="2020-08-11T19:28:52Z">
-      <class name="WeatherApplication.Testclass">
-        <test-method status="PASS" signature="abc()[pri:0, instance:WeatherApplication.Testclass@4b9e13df]" name="abc" duration-ms="22905" started-at="2020-08-11T19:28:29Z" finished-at="2020-08-11T19:28:52Z">
+    <test name="Default test" duration-ms="70932" started-at="2020-08-12T14:13:40Z" finished-at="2020-08-12T14:14:51Z">
+      <class name="testSuit.ValidateSearchCityOnMap">
+        <test-method status="PASS" signature="Setup()[pri:0, instance:testSuit.ValidateSearchCityOnMap@5abca1e0]" name="Setup" is-config="true" duration-ms="47996" started-at="2020-08-12T14:13:40Z" finished-at="2020-08-12T14:14:28Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- abc -->
-      </class> <!-- WeatherApplication.Testclass -->
+        </test-method> <!-- Setup -->
+        <test-method status="PASS" signature="Test()[pri:0, instance:testSuit.ValidateSearchCityOnMap@5abca1e0]" name="Test" duration-ms="20955" started-at="2020-08-12T14:14:28Z" finished-at="2020-08-12T14:14:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test -->
+        <test-method status="PASS" signature="CleanUp()[pri:0, instance:testSuit.ValidateSearchCityOnMap@5abca1e0]" name="CleanUp" is-config="true" duration-ms="1882" started-at="2020-08-12T14:14:49Z" finished-at="2020-08-12T14:14:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CleanUp -->
+      </class> <!-- testSuit.ValidateSearchCityOnMap -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

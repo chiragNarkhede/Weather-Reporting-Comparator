@@ -1,0 +1,17 @@
+2020-08-12 19:43:40,616 - testSuit.ValidateSearchCityOnMap -INFO - Browser Name is chrome
+2020-08-12 19:44:28,594 - testSuit.ValidateSearchCityOnMap -FATAL - Exception Occuredelement click intercepted: Element <a href="https://social.ndtv.com/static/Weather/report/?pfrom=home-topsubnavigation">...</a> is not clickable at point (837, 92). Other element would receive the click: <div class="noti_btnwrap">...</div>
+  (Session info: chrome=84.0.4147.125)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-3OCVH7U', ip: '192.168.2.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.125, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\Chirag\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:57517}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 99cfce39a3779ad1a071719aaa3bef3f[Ljava.lang.StackTraceElement;@7d61eb55
+2020-08-12 19:44:49,636 - testSuit.ValidateSearchCityOnMap -FATAL - Exception Occuredno such element: Unable to locate element: {"method":"xpath","selector":"//span[@class='message_holder_header']"}
+  (Session info: chrome=84.0.4147.125)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-3OCVH7U', ip: '192.168.2.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.125, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\Chirag\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:57517}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 99cfce39a3779ad1a071719aaa3bef3f
+*** Element info: {Using=xpath, value=//span[@class='message_holder_header']}[Ljava.lang.StackTraceElement;@16c069df

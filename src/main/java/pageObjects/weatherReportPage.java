@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
  * Initialization of Web element
 */
 
-public class weatherReportPage {
+public class WeatherReportPage {
 	
 	public WebDriver driver;
 	
@@ -17,11 +17,17 @@ public class weatherReportPage {
 	private By weatherLogo = By.xpath(".//*[@id='logo']");
 	private By searchContainerTitle = By.xpath("//span[@class='message_holder_header']");
 	private By searchBox = By.xpath(".//*[@id='searchBox']");
-	private By checkBox = By.xpath(".//*[@type='checkbox']");
-	private By searchOnMap = By.xpath("//div[@class='cityText'][text()='cityName']");
+	private String checkBox = ".//*[@id='cityName'][@type='checkbox']";
+	
+	private String searchOnMap = "//div[@class='cityText'][text()='cityName']";
+	private By cityPopUp = By.xpath("//div[@class='leaflet-popup-content']");
+	private String dTemperature=".//div[@class='outerContainer'][@title='Pune']//following ::span[@class='tempRedText']";
+	private String fTemperature=".//div[@class='outerContainer'][@title='Pune']//following ::span[@class='tempWhiteText']";
+	private String leafLetPopUp = "//span[@class='heading'][1]//following::b[num]";
 	
 	
-	public weatherReportPage(WebDriver driver) {
+	
+	public WeatherReportPage(WebDriver driver) {
 		this.driver=driver;
 	}
 
@@ -40,15 +46,36 @@ public class weatherReportPage {
 		return driver.findElement(searchBox);
 	}
 	
-	public WebElement getCheckBox()
+	public WebElement getCheckBox(String cityName)
 	{
-		return driver.findElement(checkBox);
+		
+		return driver.findElement(By.xpath(checkBox.replace("cityName", cityName)));
 	}
 
-	public WebElement getCityOnMap()
+	public WebElement getCityOnMap(String cityName)
 	{
-		return driver.findElement(searchOnMap);
+		return driver.findElement(By.xpath(searchOnMap.replace("cityName", cityName)));
+	}
+	
+	public WebElement getLeafPopUp()
+	{
+		return driver.findElement(cityPopUp);
+	}
+	
+	public WebElement getDTemperature(String cityName)
+	{
+		return driver.findElement(By.xpath(dTemperature.replace("cityName", cityName)));
 	}
 
+	public WebElement getFTemperature(String cityName)
+	{
+		return driver.findElement(By.xpath(fTemperature.replace("cityName", cityName)));
+	}
+
+	public WebElement getPopUpData(String index)
+	{
+		return driver.findElement(By.xpath(leafLetPopUp.replace("num",index)));
+	}
+	
 	
 }

@@ -15,6 +15,7 @@ public WebDriver driver;
 	private By subMenu = By.xpath("//a[@class =\"topnavmore\"]");
 	
 	private By weather = By.xpath("//a[text()='WEATHER']");
+	private By notifiactionPopUp = By.xpath("//div[@class='noti_wrap']");
 	
 	
 	public LandingPage(WebDriver driver) {
@@ -29,6 +30,11 @@ public WebDriver driver;
 	public WebElement getWeatherOption()
 	{
 		return driver.findElement(weather);
+	}
+	
+	public WebElement getNotifacation()
+	{
+		return driver.findElement(notifiactionPopUp);
 	}
 
 }

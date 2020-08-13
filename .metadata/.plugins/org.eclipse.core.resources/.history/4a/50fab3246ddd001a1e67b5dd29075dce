@@ -1,0 +1,9 @@
+19:03:03.863 [main] DEBUG commonUtil.ScreenShotUtil - END: Capturing Screen Shot.
+19:03:04.352 [main] FATAL testSuit.VerifyTempDataOnPopandUI - Exception Occuredno such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=84.0.4147.125)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-3OCVH7U', ip: '172.20.10.4', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.125, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\Chirag\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:52927}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: b76225b8f6fc8e739820db6dfe1aec74[Ljava.lang.StackTraceElement;@35342d2f

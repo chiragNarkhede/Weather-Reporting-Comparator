@@ -1,0 +1,6 @@
+19:12:20.860 [main] DEBUG testSuit.VerifyCityTemperatureWithAPIandUI - Verify that Selected City is displayed on Map.
+19:12:20.988 [main] DEBUG commonUtil.ScreenShotUtil - START: Capturing Screen Shot.
+19:12:22.176 [main] DEBUG commonUtil.ScreenShotUtil - END: Capturing Screen Shot.
+19:12:22.176 [main] DEBUG testSuit.VerifyCityTemperatureWithAPIandUI - Verify that Temperature is displayed on city
+19:12:22.290 [main] DEBUG commonUtil.ScreenShotUtil - START: Capturing Screen Shot.
+19:12:23.363 [main] DEBUG commonUtil.ScreenShotUtil - END: Capturing Screen Shot.

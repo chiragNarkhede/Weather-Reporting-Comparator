@@ -1,0 +1,6 @@
+18:56:12.715 [main] DEBUG testSuit.VerifyCityTemperatureWithAPIandUI - Verify that after clicking on city popup displayed.
+18:56:15.921 [main] DEBUG commonUtil.ScreenShotUtil - START: Capturing Screen Shot.
+18:56:17.572 [main] DEBUG commonUtil.ScreenShotUtil - END: Capturing Screen Shot.
+18:56:17.573 [main] DEBUG testSuit.VerifyCityTemperatureWithAPIandUI - END: Test
+19:00:03.617 [main] DEBUG testSuit.VerifyCityTemperatureWithAPIandUI - Start Setup: VerifyCityTemperatureWithAPIandUI
+19:00:03.632 [main] INFO  testSuit.VerifyCityTemperatureWithAPIandUI - Start Setup: VerifyCityTemperatureWithAPIandUI

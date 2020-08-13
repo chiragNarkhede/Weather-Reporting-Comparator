@@ -1,0 +1,57 @@
+19:31:42.758 [main] DEBUG commonUtil.ScreenShotUtil - START: Capturing Screen Shot.
+19:31:44.555 [main] DEBUG commonUtil.ScreenShotUtil - END: Capturing Screen Shot.
+19:31:45.520 [main] DEBUG commonUtil.ScreenShotUtil - START: Capturing Screen Shot.
+19:31:48.002 [main] DEBUG commonUtil.ScreenShotUtil - END: Capturing Screen Shot.
+19:31:48.009 [main] DEBUG commonUtil.ScreenShotUtil - START: Capturing Screen Shot.
+19:31:48.525 [main] DEBUG commonUtil.ScreenShotUtil - END: Capturing Screen Shot.
+19:31:48.525 [main] DEBUG commonUtil.ScreenShotUtil - START: Capturing Screen Shot.
+19:31:49.534 [main] DEBUG commonUtil.ScreenShotUtil - END: Capturing Screen Shot.
+19:31:49.535 [main] DEBUG testSuit.VerifyCityTemperatureWithAPIandUI - End Setup: VerifyCityTemperatureWithAPIandUI
+19:31:50.717 [main] DEBUG commonUtil.ScreenShotUtil - START: Capturing Screen Shot.
+19:31:51.781 [main] DEBUG commonUtil.ScreenShotUtil - END: Capturing Screen Shot.
+19:31:52.032 [main] DEBUG testSuit.VerifyCityTemperatureWithAPIandUI - Enter City into search box asPune
+19:31:52.251 [main] DEBUG commonUtil.ScreenShotUtil - START: Capturing Screen Shot.
+19:31:53.302 [main] DEBUG commonUtil.ScreenShotUtil - END: Capturing Screen Shot.
+19:31:53.639 [main] DEBUG commonUtil.ScreenShotUtil - START: Capturing Screen Shot.
+19:31:54.850 [main] DEBUG commonUtil.ScreenShotUtil - END: Capturing Screen Shot.
+19:31:54.879 [main] DEBUG testSuit.VerifyCityTemperatureWithAPIandUI - Verify that Selected City is displayed on Map.
+19:31:54.924 [main] DEBUG commonUtil.ScreenShotUtil - START: Capturing Screen Shot.
+19:31:56.270 [main] DEBUG commonUtil.ScreenShotUtil - END: Capturing Screen Shot.
+19:31:56.270 [main] DEBUG testSuit.VerifyCityTemperatureWithAPIandUI - Verify that Temperature is displayed on city
+19:31:56.351 [main] DEBUG commonUtil.ScreenShotUtil - START: Capturing Screen Shot.
+19:31:57.421 [main] DEBUG commonUtil.ScreenShotUtil - END: Capturing Screen Shot.
+19:31:57.421 [main] DEBUG testSuit.VerifyCityTemperatureWithAPIandUI - Verify Temperature form city container with popup temperature.
+19:31:57.450 [main] DEBUG testSuit.VerifyCityTemperatureWithAPIandUI - Verify that after clicking on city popup displayed.
+19:31:57.845 [main] DEBUG commonUtil.ScreenShotUtil - START: Capturing Screen Shot.
+19:31:59.071 [main] DEBUG commonUtil.ScreenShotUtil - END: Capturing Screen Shot.
+19:31:59.071 [main] DEBUG testSuit.VerifyCityTemperatureWithAPIandUI - Verify Temperature from API and UI
+19:31:59.090 [main] INFO  base.TestBase - Get Values for temperature.
+19:31:59.090 [main] INFO  base.TestBase - Compare temperature from UI and API using variance logic.
+19:31:59.090 [main] INFO  base.TestBase - Compare temperature from UI and API using variance logic.Result:true
+19:31:59.091 [main] DEBUG testSuit.VerifyCityTemperatureWithAPIandUI - END: Test
+19:33:16.820 [main] DEBUG testSuit.VerifyTempDataOnPopandUI - Start Setup: VerifyTempDataOnPopandUI
+19:33:22.958 [main] DEBUG testSuit.VerifyTempDataOnPopandUI - Initialize Web Driver
+19:33:22.958 [main] DEBUG base.TestBase - START: DriverInitializer
+19:33:22.959 [main] INFO  base.TestBase - Browser Name is chrome
+19:33:22.959 [main] DEBUG base.TestBase - Checking which browser need to be invoked
+19:33:30.220 [main] DEBUG base.TestBase - Creating web Driver wait.
+19:33:30.593 [main] DEBUG base.TestBase - END: DriverInitializer
+19:33:41.483 [main] DEBUG testSuit.VerifyTempDataOnPopandUI - Initialising Object of Landing Page.
+19:33:41.762 [main] DEBUG commonUtil.ScreenShotUtil - START: Capturing Screen Shot.
+19:33:44.048 [main] DEBUG commonUtil.ScreenShotUtil - END: Capturing Screen Shot.
+19:33:50.197 [main] DEBUG testSuit.VerifyTempDataOnPopandUI - Getting title of Landing Page.NDTV: Latest News, India News, Breaking News, Business, Bollywood, Cricket, Videos & Photos
+19:34:29.182 [main] DEBUG commonUtil.ScreenShotUtil - START: Capturing Screen Shot.
+19:34:30.531 [main] DEBUG commonUtil.ScreenShotUtil - END: Capturing Screen Shot.
+19:34:31.058 [main] DEBUG commonUtil.ScreenShotUtil - START: Capturing Screen Shot.
+19:34:33.008 [main] DEBUG commonUtil.ScreenShotUtil - END: Capturing Screen Shot.
+19:34:33.015 [main] DEBUG commonUtil.ScreenShotUtil - START: Capturing Screen Shot.
+19:34:33.500 [main] DEBUG commonUtil.ScreenShotUtil - END: Capturing Screen Shot.
+19:34:33.500 [main] DEBUG commonUtil.ScreenShotUtil - START: Capturing Screen Shot.
+19:34:33.871 [main] DEBUG commonUtil.ScreenShotUtil - END: Capturing Screen Shot.
+19:34:33.872 [main] DEBUG testSuit.VerifyTempDataOnPopandUI - End Setup: VerifyCityTemperatureWithAPIandUI
+19:34:35.409 [main] DEBUG commonUtil.ScreenShotUtil - START: Capturing Screen Shot.
+19:34:36.460 [main] DEBUG commonUtil.ScreenShotUtil - END: Capturing Screen Shot.
+19:34:36.710 [main] DEBUG testSuit.VerifyTempDataOnPopandUI - Enter City into search box asPune
+19:34:37.239 [main] DEBUG commonUtil.ScreenShotUtil - START: Capturing Screen Shot.
+19:34:38.337 [main] DEBUG commonUtil.ScreenShotUtil - END: Capturing Screen Shot.
+19:34:38.561 [main] DEBUG commonUtil.ScreenShotUtil - START: Capturing Screen Shot.

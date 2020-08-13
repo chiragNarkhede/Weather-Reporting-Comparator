@@ -1,0 +1,7 @@
+19:00:23.106 [main] DEBUG testSuit.VerifyCityTemperatureWithAPIandUI - Initialize Web Driver
+19:00:23.159 [main] DEBUG base.TestBase - START: DriverInitializer
+19:00:23.159 [main] INFO  base.TestBase - Browser Name is chrome
+19:00:23.159 [main] DEBUG base.TestBase - Checking which browser need to be invoked
+19:00:35.011 [main] DEBUG base.TestBase - Creating web Driver wait.
+19:00:35.168 [main] DEBUG base.TestBase - END: DriverInitializer
+19:00:55.178 [main] DEBUG testSuit.VerifyCityTemperatureWithAPIandUI - Initialising Object of Landing Page.

@@ -1,6 +1,7 @@
 package testSuit;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
@@ -21,24 +22,24 @@ import commonUtil.ScreenShotUtil;
 
 import model.WeatherReportResponse;
 
-
-/* Verify temperature from Container and city popup.
+/* Test Case : Verify temperature from Container and city popup.
  */
 
 public class VerifyTempDataOnPopandUI extends TestBase {
-	public  static Logger logger = LogManager.getLogger(VerifyTempDataOnPopandUI.class.getName());
+	public static Logger logger = LogManager.getLogger(VerifyTempDataOnPopandUI.class.getName());
 	public WebDriver driver;
-	
+
 	boolean setupResult = true;
-	
+
 	public String city;
 	LandingPage landingPage;
 	WeatherReportPage reportPage;
 	WebDriverWait wait;
 	Wait<WebDriver> fluentWait;
-	
+
 	public String degreeTemp;
 	WeatherReportResponse reportResponse;
+
 	@BeforeTest
 	public void Setup() {
 
@@ -67,18 +68,15 @@ public class VerifyTempDataOnPopandUI extends TestBase {
 			}
 
 			Thread.sleep(500);
-			
-			if(TestBase.IsAlertPresent(driver,wait))
-			{
+
+			if (TestBase.IsAlertPresent(driver, wait)) {
 				driver.switchTo().alert().dismiss();
 				ScreenShotUtil.CaptureScreenShot(driver, true);
-				
-			}else
-			{
+
+			} else {
 				/* Sometimes Alert is not displaying */
 				driver.navigate().refresh();
 			}
-			
 
 			reportPage = PageFactory.initElements(driver, WeatherReportPage.class);
 			if (landingPage.getSubMenu().isDisplayed()) {
@@ -87,13 +85,13 @@ public class VerifyTempDataOnPopandUI extends TestBase {
 			ScreenShotUtil.CaptureScreenShot(driver, true);
 			landingPage.getWeatherOption().click();
 			ScreenShotUtil.CaptureScreenShot(driver, true);
-			
+
 			if (!driver.getTitle().contains("WEATHER")) {
 				setupResult = false;
 				ScreenShotUtil.CaptureScreenShot(driver, false);
 			}
 			ScreenShotUtil.CaptureScreenShot(driver, true);
-			
+
 		} catch (Exception e) {
 			logger.fatal("Exception Occured" + e.getMessage().toString() + e.getStackTrace().toString());
 
@@ -114,7 +112,7 @@ public class VerifyTempDataOnPopandUI extends TestBase {
 			wait.until(ExpectedConditions.visibilityOf(reportPage.getSearchContainerTitle()));
 			String selectCityContainer = reportPage.getSearchContainerTitle().getText();
 			ScreenShotUtil.CaptureScreenShot(driver, true);
-	
+
 			/*
 			 * Step 2
 			 */
@@ -123,24 +121,23 @@ public class VerifyTempDataOnPopandUI extends TestBase {
 			reportPage.getSearchBox().sendKeys(city);
 			ScreenShotUtil.CaptureScreenShot(driver, true);
 			reportPage.getSearchBox().sendKeys(Keys.ENTER);
-		
+
 			reportPage.getCheckBox(city).click();
 			ScreenShotUtil.CaptureScreenShot(driver, true);
-			Assert.assertEquals(selectCityContainer.contains("Pin your City"),expected,"Container is not present");
+			Assert.assertEquals(selectCityContainer.contains("Pin your City"), expected, "Container is not present");
 
 			/*
 			 * Step 3
 			 */
 			boolean cityOnMap = reportPage.getCityOnMap(city).isDisplayed();
-			if(cityOnMap)
-			{
+			if (cityOnMap) {
 				logger.debug("Verify that Temperature is displayed on city");
 				boolean tempPresent = reportPage.getDTemperature(city).isDisplayed();
 				tempPresent &= reportPage.getFTemperature(city).isDisplayed();
 				ScreenShotUtil.CaptureScreenShot(driver, true);
-				Assert.assertEquals(tempPresent,expected,"Temperature for city is not dispayed.");
+				Assert.assertEquals(tempPresent, expected, "Temperature for city is not dispayed.");
 				System.out.println("Verify that Temperature is displayed on city " + tempPresent);
-				
+
 				logger.debug("Verify Temperature form city container with popup temperature.");
 				degreeTemp = reportPage.getDTemperature(city).getText();
 				String fahrenheitTemp = reportPage.getFTemperature(city).getText();
@@ -155,10 +152,7 @@ public class VerifyTempDataOnPopandUI extends TestBase {
 				degreeCheck &= tempCheck;
 			}
 		} catch (Exception e) {
-			logger.fatal("Exception Occured" + 
-					e.getMessage().toString() + 
-					e.getStackTrace().toString()
-			);
+			logger.fatal("Exception Occured" + e.getMessage().toString() + e.getStackTrace().toString());
 
 		} finally {
 			logger.debug("END: Test");

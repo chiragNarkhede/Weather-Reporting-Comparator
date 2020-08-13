@@ -19,9 +19,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import commonUtil.PropertyReader;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
@@ -35,10 +34,11 @@ public class TestBase {
 	public String url;
 	public WebDriverWait wait;
 	public String browserName;
-	
+
 	public Wait<WebDriver> fluentWait;
 
 	public static Logger log = LogManager.getLogger(TestBase.class.getName());
+
 	/*
 	 * Initialize the web Driver.
 	 * 
@@ -47,7 +47,7 @@ public class TestBase {
 	public WebDriver DriverInitializer() throws IOException {
 
 		try {
-			
+
 			log.debug("START: DriverInitializer");
 			browserName = PropertyReader.getBrowserName();
 			log.info("Browser Name is " + browserName);
@@ -82,9 +82,8 @@ public class TestBase {
 			wait.until(ExpectedConditions.alertIsPresent());
 
 		} catch (Exception e) {
-			
-			
-			result&=false;
+
+			result &= false;
 		}
 
 		return result;

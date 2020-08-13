@@ -1,0 +1,5 @@
+19:03:04.449 [main] DEBUG testSuit.VerifyTempDataOnPopandUI - End Setup: VerifyCityTemperatureWithAPIandUI
+19:10:53.364 [main] DEBUG testSuit.VerifyCityTemperatureWithAPIandUI - Start Setup: VerifyCityTemperatureWithAPIandUI
+19:10:53.374 [main] INFO  testSuit.VerifyCityTemperatureWithAPIandUI - Start Setup: VerifyCityTemperatureWithAPIandUI
+19:11:02.008 [main] DEBUG testSuit.VerifyCityTemperatureWithAPIandUI - Initialize Web Driver
+19:11:02.008 [main] DEBUG base.TestBase - START: DriverInitializer

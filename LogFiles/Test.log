@@ -1,0 +1,7 @@
+19:34:39.720 [main] DEBUG commonUtil.ScreenShotUtil - END: Capturing Screen Shot.
+19:34:39.977 [main] DEBUG testSuit.VerifyTempDataOnPopandUI - Verify that Temperature is displayed on city
+19:34:40.062 [main] DEBUG commonUtil.ScreenShotUtil - START: Capturing Screen Shot.
+19:34:41.158 [main] DEBUG commonUtil.ScreenShotUtil - END: Capturing Screen Shot.
+19:34:41.158 [main] DEBUG testSuit.VerifyTempDataOnPopandUI - Verify Temperature form city container with popup temperature.
+19:34:41.952 [main] DEBUG testSuit.VerifyTempDataOnPopandUI - Get temperature from the city pop up and compare with container temperature.
+19:34:42.063 [main] DEBUG testSuit.VerifyTempDataOnPopandUI - END: Test

@@ -1,0 +1,7 @@
+19:11:02.009 [main] INFO  base.TestBase - Browser Name is chrome
+19:11:02.072 [main] DEBUG base.TestBase - Checking which browser need to be invoked
+19:11:06.317 [main] DEBUG base.TestBase - Creating web Driver wait.
+19:11:06.342 [main] DEBUG base.TestBase - END: DriverInitializer
+19:11:23.182 [main] DEBUG testSuit.VerifyCityTemperatureWithAPIandUI - Initialising Object of Landing Page.
+19:11:23.197 [main] DEBUG commonUtil.ScreenShotUtil - START: Capturing Screen Shot.
+19:11:24.180 [main] DEBUG commonUtil.ScreenShotUtil - END: Capturing Screen Shot.

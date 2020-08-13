@@ -1,0 +1,6 @@
+19:12:12.111 [main] DEBUG commonUtil.ScreenShotUtil - START: Capturing Screen Shot.
+19:12:13.190 [main] DEBUG commonUtil.ScreenShotUtil - END: Capturing Screen Shot.
+19:12:13.190 [main] DEBUG commonUtil.ScreenShotUtil - START: Capturing Screen Shot.
+19:12:14.304 [main] DEBUG commonUtil.ScreenShotUtil - END: Capturing Screen Shot.
+19:12:14.304 [main] DEBUG testSuit.VerifyCityTemperatureWithAPIandUI - End Setup: VerifyCityTemperatureWithAPIandUI
+19:12:15.360 [main] DEBUG commonUtil.ScreenShotUtil - START: Capturing Screen Shot.

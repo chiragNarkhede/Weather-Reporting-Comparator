@@ -3,26 +3,27 @@
 <Configuration status="WARN">
 
 	<Properties>
-		<Property name="basePath">./logFiles</Property>
+		<Property name="basePath">logFiles</Property>
 	</Properties>
 
 	<Appenders>
-		
-		<RollingFile name="File"
-			fileName="${basePath}/TestCase.log"
-			filePattern="${basePath}/TestCase-%d{yyyy-MM-dd-HH-mm-ss}.log">
+
+		<RollingFile name="File" fileName="${basePath}/Test.log"
+			filePattern="${basePath}/Test-%d{yyyy-MM-dd}.log">
 
 			<PatternLayout
 				pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
 
-			<SizeBasedTriggeringPolicy size="500" />
+			<SizeBasedTriggeringPolicy size="5Kb" />
 
 		</RollingFile>
-</Appenders>
+
+
+	</Appenders>
 
 	<Loggers>
 
-		<Root level="trace">
+		<Root level="debug">
 
 			<AppenderRef ref="File" />
 

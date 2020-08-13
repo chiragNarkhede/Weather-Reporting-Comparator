@@ -1,65 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="174348" started-at="2020-08-13T12:19:57Z" finished-at="2020-08-13T12:22:52Z">
+  <suite name="Default suite" duration-ms="87334" started-at="2020-08-13T14:03:16Z" finished-at="2020-08-13T14:04:44Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="174348" started-at="2020-08-13T12:19:57Z" finished-at="2020-08-13T12:22:52Z">
-      <class name="testSuit.VerifyCityTemperatureWithAPIandUI">
-        <test-method status="PASS" signature="Setup()[pri:0, instance:testSuit.VerifyCityTemperatureWithAPIandUI@5025a98f]" name="Setup" is-config="true" duration-ms="141276" started-at="2020-08-13T12:19:57Z" finished-at="2020-08-13T12:22:19Z">
+    <test name="Default test" duration-ms="87334" started-at="2020-08-13T14:03:16Z" finished-at="2020-08-13T14:04:44Z">
+      <class name="testSuit.VerifyTempDataOnPopandUI">
+        <test-method status="PASS" signature="Setup()[pri:0, instance:testSuit.VerifyTempDataOnPopandUI@77f1baf5]" name="Setup" is-config="true" duration-ms="77069" started-at="2020-08-13T14:03:16Z" finished-at="2020-08-13T14:04:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method status="FAIL" signature="Test()[pri:0, instance:testSuit.VerifyCityTemperatureWithAPIandUI@5025a98f]" name="Test" duration-ms="13231" started-at="2020-08-13T12:22:20Z" finished-at="2020-08-13T12:22:33Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[After clicking on city popup is not displayed. expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: After clicking on city popup is not displayed. expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:568)
-at testSuit.VerifyCityTemperatureWithAPIandUI.Test(VerifyCityTemperatureWithAPIandUI.java:156)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method status="PASS" signature="Test()[pri:0, instance:testSuit.VerifyTempDataOnPopandUI@77f1baf5]" name="Test" duration-ms="8019" started-at="2020-08-13T14:04:34Z" finished-at="2020-08-13T14:04:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Test -->
-        <test-method status="PASS" signature="CleanUp()[pri:0, instance:testSuit.VerifyCityTemperatureWithAPIandUI@5025a98f]" name="CleanUp" is-config="true" duration-ms="18425" started-at="2020-08-13T12:22:33Z" finished-at="2020-08-13T12:22:52Z">
+        <test-method status="PASS" signature="CleanUp()[pri:0, instance:testSuit.VerifyTempDataOnPopandUI@77f1baf5]" name="CleanUp" is-config="true" duration-ms="2064" started-at="2020-08-13T14:04:42Z" finished-at="2020-08-13T14:04:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CleanUp -->
-      </class> <!-- testSuit.VerifyCityTemperatureWithAPIandUI -->
+      </class> <!-- testSuit.VerifyTempDataOnPopandUI -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

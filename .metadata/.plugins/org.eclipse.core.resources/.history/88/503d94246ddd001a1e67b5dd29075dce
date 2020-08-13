@@ -1,0 +1,5 @@
+19:11:24.190 [main] DEBUG testSuit.VerifyCityTemperatureWithAPIandUI - Getting title of Landing Page.NDTV: Latest News, India News, Breaking News, Business, Bollywood, Cricket, Videos & Photos
+19:12:07.186 [main] DEBUG commonUtil.ScreenShotUtil - START: Capturing Screen Shot.
+19:12:08.289 [main] DEBUG commonUtil.ScreenShotUtil - END: Capturing Screen Shot.
+19:12:09.737 [main] DEBUG commonUtil.ScreenShotUtil - START: Capturing Screen Shot.
+19:12:11.946 [main] DEBUG commonUtil.ScreenShotUtil - END: Capturing Screen Shot.

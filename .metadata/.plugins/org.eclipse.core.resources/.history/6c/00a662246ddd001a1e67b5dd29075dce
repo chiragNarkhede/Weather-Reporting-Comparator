@@ -1,0 +1,6 @@
+19:12:16.740 [main] DEBUG commonUtil.ScreenShotUtil - END: Capturing Screen Shot.
+19:12:16.992 [main] DEBUG testSuit.VerifyCityTemperatureWithAPIandUI - Enter City into search box asPune
+19:12:17.866 [main] DEBUG commonUtil.ScreenShotUtil - START: Capturing Screen Shot.
+19:12:18.959 [main] DEBUG commonUtil.ScreenShotUtil - END: Capturing Screen Shot.
+19:12:19.611 [main] DEBUG commonUtil.ScreenShotUtil - START: Capturing Screen Shot.
+19:12:20.858 [main] DEBUG commonUtil.ScreenShotUtil - END: Capturing Screen Shot.

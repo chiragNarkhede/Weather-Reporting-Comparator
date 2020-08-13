@@ -1,0 +1,6 @@
+19:12:23.363 [main] DEBUG testSuit.VerifyCityTemperatureWithAPIandUI - Verify Temperature form city container with popup temperature.
+19:12:23.405 [main] DEBUG testSuit.VerifyCityTemperatureWithAPIandUI - Verify that after clicking on city popup displayed.
+19:12:24.269 [main] DEBUG commonUtil.ScreenShotUtil - START: Capturing Screen Shot.
+19:12:25.730 [main] DEBUG commonUtil.ScreenShotUtil - END: Capturing Screen Shot.
+19:12:25.817 [main] INFO  base.TestBase - Get Values for temperature.
+19:12:25.817 [main] INFO  base.TestBase - Compare temperature from UI and API using variance logic.

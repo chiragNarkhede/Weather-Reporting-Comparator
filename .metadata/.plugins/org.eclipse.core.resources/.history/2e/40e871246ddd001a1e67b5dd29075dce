@@ -1,0 +1,6 @@
+19:01:59.881 [main] DEBUG testSuit.VerifyCityTemperatureWithAPIandUI - End Setup: VerifyCityTemperatureWithAPIandUI
+19:01:59.884 [main] DEBUG testSuit.VerifyTempDataOnPopandUI - Start Setup: VerifyTempDataOnPopandUI
+19:02:31.253 [main] DEBUG testSuit.VerifyTempDataOnPopandUI - Initialize Web Driver
+19:02:31.253 [main] DEBUG base.TestBase - START: DriverInitializer
+19:02:31.254 [main] INFO  base.TestBase - Browser Name is chrome
+19:02:31.254 [main] DEBUG base.TestBase - Checking which browser need to be invoked

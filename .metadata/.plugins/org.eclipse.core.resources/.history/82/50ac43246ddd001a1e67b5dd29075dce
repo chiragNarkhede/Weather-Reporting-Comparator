@@ -1,0 +1,6 @@
+18:54:40.327 [main] DEBUG base.TestBase - Creating web Driver wait.
+18:54:40.475 [main] DEBUG base.TestBase - END: DriverInitializer
+18:54:57.859 [main] DEBUG testSuit.VerifyCityTemperatureWithAPIandUI - Initialising Object of Landing Page.
+18:54:58.257 [main] DEBUG commonUtil.ScreenShotUtil - START: Capturing Screen Shot.
+18:55:01.320 [main] DEBUG commonUtil.ScreenShotUtil - END: Capturing Screen Shot.
+18:55:07.177 [main] DEBUG testSuit.VerifyCityTemperatureWithAPIandUI - Getting title of Landing Page.NDTV: Latest News, India News, Breaking News, Business, Bollywood, Cricket, Videos & Photos

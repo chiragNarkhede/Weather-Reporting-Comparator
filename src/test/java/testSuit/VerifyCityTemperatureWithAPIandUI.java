@@ -1,7 +1,7 @@
 package testSuit;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -22,23 +22,23 @@ import commonUtil.ScreenShotUtil;
 import commonUtil.UiOps;
 import model.WeatherReportResponse;
 
-
-/* Verify City on Map.
+/* TestCase 1 Verify city temperature from API response and UI.
  */
 public class VerifyCityTemperatureWithAPIandUI extends TestBase {
 
-	private static Logger log = LogManager.getLogger(VerifyCityTemperatureWithAPIandUI.class.getName());
+	private static Logger log = LogManager.getLogger(VerifyCityTemperatureWithAPIandUI.class);
 	public WebDriver driver;
 	boolean setupResult = true;
-	
+
 	public String city;
 	LandingPage landingPage;
 	WeatherReportPage reportPage;
 	WebDriverWait wait;
 	Wait<WebDriver> fluentWait;
-	
+
 	public String degreeTemp;
 	WeatherReportResponse reportResponse;
+
 	@BeforeTest
 	public void Setup() {
 
@@ -48,7 +48,6 @@ public class VerifyCityTemperatureWithAPIandUI extends TestBase {
 
 			PropertyReader.ReadFile();
 			reportResponse = ApiOps.GetResponse();
-			System.out.println(reportResponse.toString());
 			city = PropertyReader.getCity();
 			log.debug("Initialize Web Driver");
 			driver = DriverInitializer();
@@ -68,18 +67,15 @@ public class VerifyCityTemperatureWithAPIandUI extends TestBase {
 			}
 
 			Thread.sleep(500);
-			
-			if(TestBase.IsAlertPresent(driver,wait))
-			{
+
+			if (TestBase.IsAlertPresent(driver, wait)) {
 				driver.switchTo().alert().dismiss();
 				ScreenShotUtil.CaptureScreenShot(driver, true);
-				
-			}else
-			{
+
+			} else {
 				/* Sometimes Alert is not displaying */
 				driver.navigate().refresh();
 			}
-			
 
 			reportPage = PageFactory.initElements(driver, WeatherReportPage.class);
 			if (landingPage.getSubMenu().isDisplayed()) {
@@ -88,13 +84,13 @@ public class VerifyCityTemperatureWithAPIandUI extends TestBase {
 			ScreenShotUtil.CaptureScreenShot(driver, true);
 			landingPage.getWeatherOption().click();
 			ScreenShotUtil.CaptureScreenShot(driver, true);
-			
+
 			if (!driver.getTitle().contains("WEATHER")) {
 				setupResult = false;
 				ScreenShotUtil.CaptureScreenShot(driver, false);
 			}
 			ScreenShotUtil.CaptureScreenShot(driver, true);
-			
+
 		} catch (Exception e) {
 			log.fatal("Exception Occured" + e.getMessage().toString() + e.getStackTrace().toString());
 
@@ -115,7 +111,7 @@ public class VerifyCityTemperatureWithAPIandUI extends TestBase {
 			wait.until(ExpectedConditions.visibilityOf(reportPage.getSearchContainerTitle()));
 			String selectCityContainer = reportPage.getSearchContainerTitle().getText();
 			ScreenShotUtil.CaptureScreenShot(driver, true);
-	
+
 			/*
 			 * Step 2
 			 */
@@ -127,7 +123,7 @@ public class VerifyCityTemperatureWithAPIandUI extends TestBase {
 			reportPage.getSearchBox().sendKeys(Keys.ENTER);
 			reportPage.getCheckBox(city).click();
 			ScreenShotUtil.CaptureScreenShot(driver, true);
-			Assert.assertEquals(selectCityContainer.contains("Pin your City"),expected,"Container is not present");
+			Assert.assertEquals(selectCityContainer.contains("Pin your City"), expected, "Container is not present");
 
 			/*
 			 * Step 3
@@ -135,7 +131,7 @@ public class VerifyCityTemperatureWithAPIandUI extends TestBase {
 			log.debug("Verify that Selected City is displayed on Map.");
 			boolean cityOnMap = reportPage.getCityOnMap(city).isDisplayed();
 			ScreenShotUtil.CaptureScreenShot(driver, true);
-			Assert.assertEquals(cityOnMap,expected,"Selected City is not displayed on Map");
+			Assert.assertEquals(cityOnMap, expected, "Selected City is not displayed on Map");
 			/*
 			 * Step 4
 			 */
@@ -144,7 +140,7 @@ public class VerifyCityTemperatureWithAPIandUI extends TestBase {
 			boolean tempPresent = reportPage.getDTemperature(city).isDisplayed();
 			tempPresent &= reportPage.getFTemperature(city).isDisplayed();
 			ScreenShotUtil.CaptureScreenShot(driver, true);
-			Assert.assertEquals(tempPresent,expected,"Temperature for city is not dispayed.");
+			Assert.assertEquals(tempPresent, expected, "Temperature for city is not dispayed.");
 			/*
 			 * Step 5 ,6,7
 			 */
@@ -152,18 +148,17 @@ public class VerifyCityTemperatureWithAPIandUI extends TestBase {
 			degreeTemp = reportPage.getDTemperature(city).getText();
 			log.debug("Verify that after clicking on city popup displayed.");
 			reportPage.getCityOnMap(city).click();
+			wait.until(ExpectedConditions.visibilityOf(reportPage.getLeafPopUp()));
 			boolean popUpDisplayed = reportPage.getLeafPopUp().isDisplayed();
 			ScreenShotUtil.CaptureScreenShot(driver, true);
-			Assert.assertEquals(popUpDisplayed,expected,"After clicking on city popup is not displayed.");
-			
-			
+			Assert.assertEquals(popUpDisplayed, expected, "After clicking on city popup is not displayed.");
+
 			/*
 			 * Step 8
 			 */
-			boolean apiMatchUI = UiOps.checkTemp(degreeTemp.substring(0, 2),reportResponse);
-			Assert.assertEquals(apiMatchUI,expected,"Temperature from the API and UI Matched.");
-			
-			
+			log.debug("Verify Temperature from API and UI");
+			boolean apiMatchUi = UiOps.checkTemp(degreeTemp.substring(0, 2), reportResponse);
+			Assert.assertEquals(apiMatchUi, expected, " Temperature from API and UI not matched");
 
 		} catch (Exception e) {
 			log.fatal("Exception Occured" + e.getMessage().toString() + e.getStackTrace().toString());

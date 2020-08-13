@@ -24,3 +24,4 @@
 
 #### Running Tests
 * You can run the test direclty by right click on Test from src/test/java/TestSuit, select "Run As" option and click on "TestNG Test".
+* You can also run test case by right click on testng.xml present in base structure and select "Run As" option and click on "TestNG Test".

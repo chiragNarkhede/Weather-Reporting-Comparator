@@ -1,0 +1,13 @@
+package commonUtil;
+
+public class MatcherException extends Exception{
+	
+	
+	@Override
+	public String toString()
+	{
+		return ("Matched Not found.");
+	}
+	
+
+}

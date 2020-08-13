@@ -1,0 +1,20 @@
+package WeatherApplication;
+
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+import org.testng.annotations.Test;
+
+public class Testting {
+
+	public static Logger logger = LogManager.getLogger(Testting.class.getName());
+	@Test
+	public void abc()
+	{
+		logger.debug("Check Logs");
+		logger.debug("Check Logs");
+		logger.debug("Check Logs");
+		logger.error("Check Logs");
+		logger.info("Check Logs");
+	}
+	
+}

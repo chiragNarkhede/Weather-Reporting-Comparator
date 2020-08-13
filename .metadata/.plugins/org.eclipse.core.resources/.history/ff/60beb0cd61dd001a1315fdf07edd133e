@@ -1,0 +1,50 @@
+package model;
+
+import java.util.List;
+import model.WeatherDetails;
+import model.WindDetails;
+import model.MainDetails;
+
+
+public class WeatherReportResponse {
+	
+	public  List<WeatherDetails> weather ;
+	public  MainDetails main;
+	public  WindDetails wind;
+	public  String name;
+
+	
+	
+	public MainDetails getMain() {
+		return main;
+	}
+
+	public void setMain(MainDetails main) {
+		this.main = main;
+	}
+
+	public WindDetails getWind() {
+		return wind;
+	}
+
+	public void setWind(WindDetails wind) {
+		this.wind = wind;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public List<WeatherDetails> getWeather() {
+		return weather;
+	}
+
+	public void setWeather(List<WeatherDetails> weather) {
+		this.weather = weather;
+	}
+
+}

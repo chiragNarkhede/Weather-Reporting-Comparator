@@ -1,0 +1,21 @@
+package commonUtil;
+
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+
+public class ApiOps {
+	
+	String key = "7fe67bf08c80ded756e598d6f8fedaea";
+	@Test
+	public void Get()
+	{
+		System.out.println("HIII");
+		//String uRI = apiUrl.replace("city",city).replace("key", key);
+		Response response = RestAssured.get("http://api.openweathermap.org/data/2.5/weather?q=Pune&appid=7fe67bf08c80ded756e598d6f8fedaea");
+		
+		System.out.println(response.getStatusCode());
+	}
+
+}

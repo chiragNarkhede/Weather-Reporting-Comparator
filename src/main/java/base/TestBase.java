@@ -4,17 +4,22 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import commonUtil.PropertyReader;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.OutputType;
@@ -30,8 +35,10 @@ public class TestBase {
 	public String url;
 	public WebDriverWait wait;
 	public String browserName;
-	Logger logger;
+	
+	public Wait<WebDriver> fluentWait;
 
+	public static Logger log = LogManager.getLogger(TestBase.class.getName());
 	/*
 	 * Initialize the web Driver.
 	 * 
@@ -40,13 +47,11 @@ public class TestBase {
 	public WebDriver DriverInitializer() throws IOException {
 
 		try {
-			logger = Logger.getLogger(this.getClass());
-			PropertyConfigurator.configure(System.getProperty("user.dir") + "\\LogFiles\\Log4j.properties");
-			logger.debug("START: DriverInitializer");
+			
+			log.debug("START: DriverInitializer");
 			browserName = PropertyReader.getBrowserName();
-			logger.info("Browser Name is " + browserName);
-			System.out.println(browserName);
-			logger.debug("Checking which browser need to be invoked");
+			log.info("Browser Name is " + browserName);
+			log.debug("Checking which browser need to be invoked");
 			if (browserName.equals("chrome")) {
 				System.setProperty("webdriver.chrome.driver",
 						System.getProperty("user.dir") + PropertyReader.getChromePath());
@@ -57,16 +62,32 @@ public class TestBase {
 				driver = new FirefoxDriver();
 			}
 
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			logger.debug("Creating web Driver wait.");
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			log.debug("Creating web Driver wait.");
+			fluentWait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(30))
+					.pollingEvery(Duration.ofSeconds(3)).ignoring(Exception.class);
 
 		} catch (Exception e) {
-			logger.fatal("Exception Occured" + e.getMessage() + e.getStackTrace());
+			log.fatal("Exception Occured" + e.getMessage() + e.getStackTrace());
 		} finally {
-			logger.debug("END: DriverInitializer");
+			log.debug("END: DriverInitializer");
 		}
 		return driver;
 	}
 
-	
+	public static boolean IsAlertPresent(WebDriver driver, WebDriverWait wait) {
+		boolean result = true;
+
+		try {
+			wait.until(ExpectedConditions.alertIsPresent());
+
+		} catch (Exception e) {
+			
+			
+			result&=false;
+		}
+
+		return result;
+	}
+
 }

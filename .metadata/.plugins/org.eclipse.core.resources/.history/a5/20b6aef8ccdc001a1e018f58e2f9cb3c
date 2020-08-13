@@ -1,0 +1,8 @@
+browser = chrome
+applicationUrl = https://www.ndtv.com/ 
+chromDriverPath = \\Driver\\chromedriver.exe
+firefoxDriverPath = \\Driver\\geckodriver.exe
+screenshotFolder = \\ScreenShots
+logs = E:\\Report\\Logs
+apiURL = http://api.openweathermap.org/data/2.5/weather?q=city&appid=key
+city = Pune

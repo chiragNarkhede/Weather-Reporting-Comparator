@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+/* Read a property from property file */
 
 public class PropertyReader {
 
@@ -17,7 +18,19 @@ public class PropertyReader {
 	public static String chromePath;
 	public static String firefoxPath; 
 	public static String screenshotFolder;
+	public static String temperatureRange;
 	
+	
+	public static String getTemperatureRange() {
+		return temperatureRange;
+	}
+
+
+	public static void setTemperatureRange(String temperatureRange) {
+		PropertyReader.temperatureRange = temperatureRange;
+	}
+
+
 	public static String getUrl() {
 		return url;
 	}
@@ -103,7 +116,7 @@ public class PropertyReader {
 	public static void ReadFile() throws IOException
 	{
 		prop = new Properties();
-		FileInputStream fileInput = new FileInputStream(System.getProperty("user.dir") + "\\resources\\data.properties");
+		FileInputStream fileInput = new FileInputStream(System.getProperty("user.dir") + "\\src\\main\\resources\\data.properties");
 		prop.load(fileInput);
 		apiUrl = prop.getProperty("apiURL");
 		city = prop.getProperty("city");
@@ -112,6 +125,8 @@ public class PropertyReader {
 		browserName = prop.getProperty("browser");
 		chromePath = prop.getProperty("chromDriverPath");
 		firefoxPath = prop.getProperty("firefoxDriverPath");
+		screenshotFolder=prop.getProperty("screenshotFolder");
+		temperatureRange=prop.getProperty("temperatureRange");
 	}
 	
 }

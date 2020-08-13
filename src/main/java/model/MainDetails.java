@@ -1,10 +1,12 @@
 package model;
 
+/* Main details from API Response. */
+
 public class MainDetails {
 
 	public double temp;
 	public double humidity;
-	public double feelslike;
+	public double feels_like;
 	public double getTemp() {
 		return temp;
 	}
@@ -18,10 +20,10 @@ public class MainDetails {
 		this.humidity = humidity;
 	}
 	public double getFeelslike() {
-		return feelslike;
+		return feels_like;
 	}
 	public void setFeelslike(double feelslike) {
-		this.feelslike = feelslike;
+		this.feels_like = feelslike;
 	}
 	
 	

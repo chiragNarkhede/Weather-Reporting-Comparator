@@ -1,0 +1,105 @@
+2020-08-12 19:43:40,616 - testSuit.ValidateSearchCityOnMap -INFO - Browser Name is chrome
+2020-08-12 19:44:28,594 - testSuit.ValidateSearchCityOnMap -FATAL - Exception Occuredelement click intercepted: Element <a href="https://social.ndtv.com/static/Weather/report/?pfrom=home-topsubnavigation">...</a> is not clickable at point (837, 92). Other element would receive the click: <div class="noti_btnwrap">...</div>
+  (Session info: chrome=84.0.4147.125)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-3OCVH7U', ip: '192.168.2.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.125, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\Chirag\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:57517}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 99cfce39a3779ad1a071719aaa3bef3f[Ljava.lang.StackTraceElement;@7d61eb55
+2020-08-12 19:44:49,636 - testSuit.ValidateSearchCityOnMap -FATAL - Exception Occuredno such element: Unable to locate element: {"method":"xpath","selector":"//span[@class='message_holder_header']"}
+  (Session info: chrome=84.0.4147.125)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-3OCVH7U', ip: '192.168.2.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.125, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\Chirag\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:57517}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 99cfce39a3779ad1a071719aaa3bef3f
+*** Element info: {Using=xpath, value=//span[@class='message_holder_header']}[Ljava.lang.StackTraceElement;@16c069df
+2020-08-13 00:29:44,100 - testSuit.ValidateSearchCityOnMap -INFO - Browser Name is chrome
+2020-08-13 00:30:48,037 - testSuit.ValidateSearchCityOnMap -FATAL - Exception Occuredorg.openqa.selenium.remote.RemoteWebElement cannot be cast to org.openqa.selenium.Alert[Ljava.lang.StackTraceElement;@7098b907
+2020-08-13 00:30:48,563 - testSuit.ValidateSearchCityOnMap -FATAL - Exception Occurednull[Ljava.lang.StackTraceElement;@34129c78
+2020-08-13 00:51:26,943 - commonUtil.ApiOps -FATAL - Exception Occurednull[Ljava.lang.StackTraceElement;@38bc8ab5
+2020-08-13 00:57:02,852 - testSuit.ValidateSearchCityOnMap -INFO - Browser Name is chrome
+2020-08-13 00:59:01,833 - testSuit.ValidateSearchCityOnMap -FATAL - Exception OccuredExpected condition failed: waiting for alert to be present (tried for 50 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-3OCVH7U', ip: '192.168.1.101', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.125, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\Chirag\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:63885}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: a14756a01baec2cac33ebefde6699526[Ljava.lang.StackTraceElement;@2e570ded
+2020-08-13 00:59:01,969 - testSuit.ValidateSearchCityOnMap -FATAL - Exception Occurednull[Ljava.lang.StackTraceElement;@3336e6b6
+2020-08-13 00:59:49,774 - testSuit.ValidateSearchCityOnMap -INFO - Browser Name is chrome
+2020-08-13 01:01:56,703 - testSuit.ValidateSearchCityOnMap -FATAL - Exception OccuredExpected condition failed: waiting for alert to be present (tried for 50 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-3OCVH7U', ip: '192.168.1.101', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.125, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\Chirag\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:64184}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 375863e991bd46720bb8220f7aa64079[Ljava.lang.StackTraceElement;@3fce8fd9
+2020-08-13 01:01:56,910 - testSuit.ValidateSearchCityOnMap -FATAL - Exception Occurednull[Ljava.lang.StackTraceElement;@13b3d178
+2020-08-13 01:05:03,311 - testSuit.ValidateSearchCityOnMap -INFO - Browser Name is chrome
+2020-08-13 01:05:42,023 - testSuit.ValidateSearchCityOnMap -FATAL - Exception Occuredno such alert
+  (Session info: chrome=84.0.4147.125)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-3OCVH7U', ip: '192.168.1.101', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.125, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\Chirag\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:64359}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 461ae807424b0cd1157348abb8bc35a5[Ljava.lang.StackTraceElement;@7d322cad
+2020-08-13 01:05:42,063 - testSuit.ValidateSearchCityOnMap -FATAL - Exception Occurednull[Ljava.lang.StackTraceElement;@4149c063
+2020-08-13 01:08:42,538 - testSuit.ValidateSearchCityOnMap -INFO - Browser Name is chrome
+2020-08-13 01:09:11,914 - testSuit.ValidateSearchCityOnMap -FATAL - Exception Occuredno such alert
+  (Session info: chrome=84.0.4147.125)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-3OCVH7U', ip: '192.168.1.101', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.125, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\Chirag\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:64510}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: d8fa7c31a6fd969e0ad23d3b4131ceac[Ljava.lang.StackTraceElement;@7d322cad
+2020-08-13 01:09:12,146 - testSuit.ValidateSearchCityOnMap -FATAL - Exception Occurednull[Ljava.lang.StackTraceElement;@4149c063
+2020-08-13 01:09:34,993 - testSuit.ValidateSearchCityOnMap -INFO - Browser Name is chrome
+2020-08-13 01:10:00,016 - testSuit.ValidateSearchCityOnMap -FATAL - Exception Occuredno such alert
+  (Session info: chrome=84.0.4147.125)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-3OCVH7U', ip: '192.168.1.101', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.125, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\Chirag\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:64647}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 35e8e611299259eb7fa3609a3a930039[Ljava.lang.StackTraceElement;@7d322cad
+2020-08-13 01:10:00,069 - testSuit.ValidateSearchCityOnMap -FATAL - Exception Occurednull[Ljava.lang.StackTraceElement;@4149c063
+2020-08-13 01:12:32,489 - commonUtil.ApiOps -FATAL - Exception Occurednull[Ljava.lang.StackTraceElement;@38bc8ab5
+2020-08-13 01:54:52,996 - testSuit.ValidateSearchCityOnMap -INFO - Browser Name is chrome
+2020-08-13 02:02:27,421 - testSuit.ValidateSearchCityOnMap -INFO - Browser Name is chrome
+2020-08-13 02:02:38,917 - testSuit.ValidateSearchCityOnMap -FATAL - Exception Occurednull value in entry: url=null[Ljava.lang.StackTraceElement;@7d0332e1
+2020-08-13 02:02:38,940 - testSuit.ValidateSearchCityOnMap -FATAL - Exception Occurednull[Ljava.lang.StackTraceElement;@1e411d81
+2020-08-13 02:25:11,978 - testSuit.ValidateSearchCityOnMap -INFO - Browser Name is chrome
+2020-08-13 02:26:12,411 - testSuit.ValidateSearchCityOnMap -FATAL - Exception Occuredno such alert
+  (Session info: chrome=84.0.4147.125)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-3OCVH7U', ip: '192.168.2.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.125, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\Chirag\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:65075}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: a61fe1261345550be195636995a0010d[Ljava.lang.StackTraceElement;@63998bf4
+2020-08-13 02:26:12,768 - testSuit.ValidateSearchCityOnMap -FATAL - Exception Occurednull[Ljava.lang.StackTraceElement;@7af1cd63
+2020-08-13 02:27:35,318 - testSuit.ValidateSearchCityOnMap -INFO - Browser Name is chrome
+2020-08-13 02:28:23,004 - testSuit.ValidateSearchCityOnMap -FATAL - Exception Occuredno such alert
+  (Session info: chrome=84.0.4147.125)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-3OCVH7U', ip: '192.168.2.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.125, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\Chirag\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:65260}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 32dc0a9172d8f252f93ab27e397ed48b[Ljava.lang.StackTraceElement;@7e0b9178
+2020-08-13 02:28:23,518 - testSuit.ValidateSearchCityOnMap -FATAL - Exception Occurednull[Ljava.lang.StackTraceElement;@4351171a
+2020-08-13 02:31:24,480 - testSuit.ValidateSearchCityOnMap -INFO - Browser Name is chrome
+2020-08-13 02:34:34,133 - testSuit.ValidateSearchCityOnMap -FATAL - Exception Occuredchrome not reachable
+  (Session info: chrome=84.0.4147.125)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-3OCVH7U', ip: '192.168.2.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.125, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\Chirag\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:65498}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 82bb3e90a03fa867908b178b08e2821b[Ljava.lang.StackTraceElement;@847f3e7
+2020-08-13 02:34:34,230 - testSuit.ValidateSearchCityOnMap -FATAL - Exception Occurednull[Ljava.lang.StackTraceElement;@50825a02
+2020-08-13 09:07:34,345 - testSuit.ValidateSearchCityOnMap -INFO - Browser Name is chrome
+2020-08-13 09:10:46,519 - testSuit.ValidateSearchCityOnMap -FATAL - Exception Occuredchrome not reachable
+  (Session info: chrome=84.0.4147.125)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-3OCVH7U', ip: '192.168.2.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.125, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\Chirag\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:50601}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 98e01b99a8c2b1fcb60dd9ff4ee06e82[Ljava.lang.StackTraceElement;@332f25c8
+2020-08-13 09:10:46,885 - testSuit.ValidateSearchCityOnMap -FATAL - Exception Occurednull[Ljava.lang.StackTraceElement;@1ddd3478

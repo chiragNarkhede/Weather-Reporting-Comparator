@@ -1,0 +1,48 @@
+package commonUtil;
+
+import org.apache.log4j.Logger;
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import model.WeatherReportResponse;
+
+
+public class ApiOps {
+	
+	private static WeatherReportResponse reportResponse;
+	final int statusCode_Ok = 200;
+	Logger logger=Logger.getLogger(this.getClass()); 
+	String key = "7fe67bf08c80ded756e598d6f8fedaea";
+	@Test
+	public void Get()
+	{
+		Response response = null;
+		try 
+		{
+			System.out.println("HIiiiiii");
+			//String uRI = apiUrl.replace("city",city).replace("key", key);
+			response = RestAssured.get("http://api.openweathermap.org/data/2.5/weather?q=Pune&appid=7fe67bf08c80ded756e598d6f8fedaea");
+			
+			int statusCode = response.getStatusCode();
+			if(statusCode!=statusCode_Ok)
+			{
+				logger.error("Request not Completed.");
+			}
+			reportResponse=response.getBody().as(WeatherReportResponse.class);
+			System.out.println(reportResponse.getBase());
+			
+		}catch(Exception e)
+		{
+			
+		}finally 
+		{
+			
+		}
+		
+	}
+	
+	
+	
+
+}

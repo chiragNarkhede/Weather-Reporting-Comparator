@@ -1,0 +1,168 @@
+package testSuit;
+import org.apache.log4j.Logger;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.Test;
+import org.testng.Assert;
+import base.TestBase;
+import pageObjects.LandingPage;
+import pageObjects.WeatherReportPage;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import commonUtil.ApiOps;
+import commonUtil.PropertyReader;
+import commonUtil.ScreenShotUtil;
+import commonUtil.UiOps;
+import model.WeatherReportResponse;
+
+
+/* Verify temperature from Container and city popup.
+ */
+
+public class VerifyTempDataOnPopandUI extends TestBase {
+	public WebDriver driver;
+	boolean setupResult = true;
+	
+	public String city;
+	LandingPage landingPage;
+	WeatherReportPage reportPage;
+	WebDriverWait wait;
+	Wait<WebDriver> fluentWait;
+	Logger logger = Logger.getLogger(this.getClass());
+	public String degreeTemp;
+	WeatherReportResponse reportResponse;
+	@BeforeTest
+	public void Setup() {
+
+		logger.debug("Start Setup: VerifyTempDataOnPopandUI");
+		try {
+
+			PropertyReader.ReadFile();
+			reportResponse = ApiOps.GetResponse();
+			System.out.println(reportResponse.toString());
+			city = PropertyReader.getCity();
+			logger.debug("Initialize Web Driver");
+			driver = DriverInitializer();
+			driver.get(PropertyReader.getUrl());
+			driver.manage().window().maximize();
+			wait = new WebDriverWait(driver, 30);
+
+			logger.debug("Initialising Object of Landing Page.");
+			landingPage = PageFactory.initElements(driver, LandingPage.class);
+			ScreenShotUtil.CaptureScreenShot(driver, true);
+			String title = driver.getTitle();
+			logger.debug("Getting title of Landing Page." + title);
+			if (!title.contains("NDTV")) {
+				logger.fatal("Title is not matching." + title);
+				ScreenShotUtil.CaptureScreenShot(driver, false);
+				setupResult = false;
+			}
+
+			Thread.sleep(500);
+			
+			if(TestBase.IsAlertPresent(driver,wait))
+			{
+				driver.switchTo().alert().dismiss();
+				ScreenShotUtil.CaptureScreenShot(driver, true);
+				
+			}else
+			{
+				/* Sometimes Alert is not displaying */
+				driver.navigate().refresh();
+			}
+			
+
+			reportPage = PageFactory.initElements(driver, WeatherReportPage.class);
+			if (landingPage.getSubMenu().isDisplayed()) {
+				landingPage.getSubMenu().click();
+			}
+			ScreenShotUtil.CaptureScreenShot(driver, true);
+			landingPage.getWeatherOption().click();
+			ScreenShotUtil.CaptureScreenShot(driver, true);
+			
+			if (!driver.getTitle().contains("WEATHER")) {
+				setupResult = false;
+				ScreenShotUtil.CaptureScreenShot(driver, false);
+			}
+			ScreenShotUtil.CaptureScreenShot(driver, true);
+			
+		} catch (Exception e) {
+			logger.fatal("Exception Occured" + e.getMessage().toString() + e.getStackTrace().toString());
+
+		} finally {
+			logger.debug("End Setup: VerifyCityTemperatureWithAPIandUI");
+		}
+
+	}
+
+	@Test()
+	public void Test() {
+
+		boolean expected = true;
+		try {
+			/*
+			 * Step 1
+			 */
+			wait.until(ExpectedConditions.visibilityOf(reportPage.getSearchContainerTitle()));
+			String selectCityContainer = reportPage.getSearchContainerTitle().getText();
+			ScreenShotUtil.CaptureScreenShot(driver, true);
+	
+			/*
+			 * Step 2
+			 */
+			Thread.sleep(250);
+			logger.debug("Enter City into search box as" + city);
+			reportPage.getSearchBox().sendKeys(city);
+			ScreenShotUtil.CaptureScreenShot(driver, true);
+			reportPage.getSearchBox().sendKeys(Keys.ENTER);
+		
+			reportPage.getCheckBox(city).click();
+			ScreenShotUtil.CaptureScreenShot(driver, true);
+			Assert.assertEquals(selectCityContainer.contains("Pin your City"),expected,"Container is not present");
+
+			/*
+			 * Step 3
+			 */
+			boolean cityOnMap = reportPage.getCityOnMap(city).isDisplayed();
+			if(cityOnMap)
+			{
+				logger.debug("Verify that Temperature is displayed on city");
+				boolean tempPresent = reportPage.getDTemperature(city).isDisplayed();
+				tempPresent &= reportPage.getFTemperature(city).isDisplayed();
+				ScreenShotUtil.CaptureScreenShot(driver, true);
+				Assert.assertEquals(tempPresent,expected,"Temperature for city is not dispayed.");
+				System.out.println("Verify that Temperature is displayed on city " + tempPresent);
+				
+				logger.debug("Verify Temperature form city container with popup temperature.");
+				degreeTemp = reportPage.getDTemperature(city).getText();
+				String fahrenheitTemp = reportPage.getFTemperature(city).getText();
+				System.out.println("degreeTemp " + degreeTemp);
+
+				reportPage.getCityOnMap(city).click();
+				logger.debug("Get temperature from the city pop up and compare with container temperature.");
+				String dTempPopUp = reportPage.getPopUpData("3").getText();
+				String fTempPoup = reportPage.getPopUpData("4").getText();
+				boolean degreeCheck = dTempPopUp.contains(degreeTemp.substring(0, 2));
+				boolean tempCheck = fTempPoup.contains(fahrenheitTemp.substring(0, 2));
+				degreeCheck &= tempCheck;
+			}
+		} catch (Exception e) {
+			logger.fatal("Exception Occured" + e.getMessage().toString() + e.getStackTrace().toString());
+
+		} finally {
+			logger.debug("END: Test");
+
+		}
+	}
+
+	@AfterTest
+	public void CleanUp() {
+		driver.quit();
+	}
+
+}

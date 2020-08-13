@@ -1,0 +1,17 @@
+package testSuit;
+
+import org.testng.annotations.Test;
+
+import commonUtil.ApiOps;
+
+public class Teting{
+	
+	ApiOps api;
+	
+	@Test
+	public void test1()
+	{
+		api.GetResponse();
+	}
+
+}

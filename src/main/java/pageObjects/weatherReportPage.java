@@ -21,8 +21,8 @@ public class WeatherReportPage {
 	
 	private String searchOnMap = "//div[@class='cityText'][text()='cityName']";
 	private By cityPopUp = By.xpath("//div[@class='leaflet-popup-content']");
-	private String dTemperature=".//div[@class='outerContainer'][@title='Pune']//following ::span[@class='tempRedText']";
-	private String fTemperature=".//div[@class='outerContainer'][@title='Pune']//following ::span[@class='tempWhiteText']";
+	private String dTemperature=".//div[@class='outerContainer'][@title='cityName']//following ::span[@class='tempRedText']";
+	private String fTemperature=".//div[@class='outerContainer'][@title='cityName']//following ::span[@class='tempWhiteText']";
 	private String leafLetPopUp = "//span[@class='heading'][1]//following::b[num]";
 	
 	

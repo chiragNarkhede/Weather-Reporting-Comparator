@@ -1,0 +1,25 @@
+package model;
+
+public class WeatherReportResponse {
+	
+	public String base;
+	public String visibility;
+	
+	public String getBase() {
+		return base;
+	}
+	public void setBase(String base) {
+		this.base = base;
+	}
+	public String getVisibility() {
+		return visibility;
+	}
+	public void setVisibility(String visibility) {
+		this.visibility = visibility;
+	}
+	
+	
+	
+	
+
+}

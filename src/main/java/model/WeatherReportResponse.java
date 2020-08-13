@@ -5,13 +5,16 @@ import model.WeatherDetails;
 import model.WindDetails;
 import model.MainDetails;
 
+/* 	Create Object for JSON response 
+ * 	which received from API
+ */
 
 public class WeatherReportResponse {
 	
-	public List<WeatherDetails> weather ;
-	public MainDetails main;
-	public WindDetails wind;
-	public String name;
+	public  List<WeatherDetails> weather ;
+	public  MainDetails main;
+	public  WindDetails wind;
+	public  String name;
 
 	
 	

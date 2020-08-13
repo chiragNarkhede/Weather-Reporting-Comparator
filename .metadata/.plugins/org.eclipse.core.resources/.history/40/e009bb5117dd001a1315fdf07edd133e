@@ -1,0 +1,72 @@
+package base;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverException;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import commonUtil.PropertyReader;
+
+import org.apache.commons.io.FileUtils;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+
+/* This class is used for WebDriver
+ * initialization
+ */
+public class TestBase {
+
+	public WebDriver driver;
+	public Properties prop;
+	public String url;
+	public WebDriverWait wait;
+	public String browserName;
+	Logger logger;
+
+	/*
+	 * Initialize the web Driver.
+	 * 
+	 * @return webDriver
+	 */
+	public WebDriver DriverInitializer() throws IOException {
+
+		try {
+			logger = Logger.getLogger(this.getClass());
+			PropertyConfigurator.configure(System.getProperty("user.dir") + "\\LogFiles\\Log4j.properties");
+			logger.debug("START: DriverInitializer");
+			browserName = PropertyReader.getBrowserName();
+			logger.info("Browser Name is " + browserName);
+			System.out.println(browserName);
+			logger.debug("Checking which browser need to be invoked");
+			if (browserName.equals("chrome")) {
+				System.setProperty("webdriver.chrome.driver",
+						System.getProperty("user.dir") + PropertyReader.getChromePath());
+				driver = new ChromeDriver();
+			} else if (browserName.equals("firefox")) {
+				System.setProperty("webdriver.gecko.driver",
+						System.getProperty("user.dir") + PropertyReader.getFirefoxPath());
+				driver = new FirefoxDriver();
+			}
+
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			logger.debug("Creating web Driver wait.");
+
+		} catch (Exception e) {
+			logger.fatal("Exception Occured" + e.getMessage() + e.getStackTrace());
+		} finally {
+			logger.debug("END: DriverInitializer");
+		}
+		return driver;
+	}
+
+	
+}

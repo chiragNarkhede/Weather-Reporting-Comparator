@@ -1,0 +1,10 @@
+browser = chrome
+applicationUrl = https://www.ndtv.com/ 
+chromDriverPath = \\Driver\\chromedriver.exe
+firefoxDriverPath = \\Driver\\geckodriver.exe
+screenshotFolder = \\ScreenShots
+logs = \\LogFiles
+apiURL = http://api.openweathermap.org/data/2.5/weather?q=city&appid=key&units=metric
+apiKey= 7fe67bf08c80ded756e598d6f8fedaea
+city = Pune
+temperatureRange = 5

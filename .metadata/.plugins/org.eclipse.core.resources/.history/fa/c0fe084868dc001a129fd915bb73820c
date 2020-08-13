@@ -1,0 +1,54 @@
+package pageObjects;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+/* This class contains all landing page elements.  
+ * Initialization of Web element
+*/
+
+public class weatherReportPage {
+	
+	public WebDriver driver;
+	
+	/*Web Elements */
+	
+	private By weatherLogo = By.xpath(".//*[@id='logo']");
+	private By searchContainerTitle = By.xpath("//span[@class='message_holder_header']");
+	private By searchBox = By.xpath(".//*[@id='searchBox']");
+	private By checkBox = By.xpath(".//*[@type='checkbox']");
+	private By searchOnMap = By.xpath("//div[@class='cityText'][text()='cityName']");
+	
+	
+	public weatherReportPage(WebDriver driver) {
+		this.driver=driver;
+	}
+
+	public WebElement getLogo()
+	{
+		return driver.findElement(weatherLogo);
+	}
+
+	public WebElement getSearchContainerTitle()
+	{
+		return driver.findElement(searchContainerTitle);
+	}
+	
+	public WebElement getSearchBox()
+	{
+		return driver.findElement(searchBox);
+	}
+	
+	public WebElement getCheckBox()
+	{
+		return driver.findElement(checkBox);
+	}
+
+	public WebElement getCityOnMap()
+	{
+		return driver.findElement(searchOnMap);
+	}
+
+	
+}

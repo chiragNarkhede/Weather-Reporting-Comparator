@@ -1,5 +1,7 @@
 package model;
 
+/* Wind details from API Response. */
+
 public class WindDetails {
 	
 	public double speed;

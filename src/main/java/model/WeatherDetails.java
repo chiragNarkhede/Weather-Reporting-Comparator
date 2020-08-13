@@ -1,4 +1,5 @@
 package model;
+/* Weather details from API Response. */
 
 public class WeatherDetails {
 	

@@ -1,0 +1,37 @@
+package commonUtil;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class PropertyReader {
+
+	
+
+	public static String url;
+	public static String apiUrl ;
+	public static String city;
+	public static String key; 
+	public static String browserName;
+	public static Properties prop;
+	public static String chromePath;
+	public static String firefoxPath; 
+	
+	public static void ReadFile() throws IOException
+	{
+		prop = new Properties();
+		FileInputStream fileInput = new FileInputStream(System.getProperty("user.dir") + "\\InputFiles\\data.properties");
+		prop.load(fileInput);
+		apiUrl = prop.getProperty("apiURL");
+		city = prop.getProperty("city");
+		key = prop.getProperty("apiKey");
+		url = prop.getProperty("applicationUrl");
+		browserName = prop.getProperty("browser");
+		chromePath = prop.getProperty("chromDriverPath");
+		firefoxPath = prop.getProperty("firefoxDriverPath");
+	}
+	
+}

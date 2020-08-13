@@ -2,6 +2,7 @@ package commonUtil;
 
 import org.apache.log4j.Logger;
 import org.testng.annotations.Test;
+import org.apache.log4j.LogManager;
 
 import base.TestBase;
 import io.restassured.RestAssured;
@@ -11,8 +12,7 @@ import model.WeatherReportResponse;
 public class ApiOps {
 
 	final static int statusCode_Ok = 200;
-	static Logger logger = Logger.getLogger("ApiOps");
-	
+	 public static Logger log =LogManager.getLogger(ApiOps.class.getName());
 
 	public static WeatherReportResponse GetResponse() {
 		
@@ -26,12 +26,12 @@ public class ApiOps {
 			response = RestAssured.get(uRI);
 			int statusCode = response.getStatusCode();
 			if (statusCode != statusCode_Ok) {
-				logger.error("Request not Completed.");
+				log.error("Request not Completed.");
 			}
 			reportResponse = response.getBody().as(WeatherReportResponse.class);
 
 		} catch (Exception e) {
-			logger.fatal("Exception Occured" + e.getMessage() + e.getStackTrace());
+			log.fatal("Exception Occured" + e.getMessage() + e.getStackTrace());
 		}
 
 		return reportResponse;

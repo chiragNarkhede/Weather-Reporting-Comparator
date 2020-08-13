@@ -8,6 +8,12 @@
 
 ## Getting Started
 
+#### Tech Stack
+* **JAVA** as ther programming language for writing test code.
+* **RESTAssured** library for **REST API** valiation.
+* **Selenium** and **TestNG** as the frameworks.
+
+
 #### Setup:
 * Install [Java 8](http://www.oracle.com/technetwork/java/javase/overview/java8-2100321.html)
 * Install [Maven](https://maven.apache.org/)
